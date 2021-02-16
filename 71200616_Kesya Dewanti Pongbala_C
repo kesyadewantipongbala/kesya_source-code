@@ -1,0 +1,19 @@
+# Nama : Kesya Dewanti Pongbala
+# Universitas Kristen Duta Wacana
+
+'''
+Latihan 2.2
+Menghitung nilai fungsi f = 2x**3 + 2x + 15/x , jika x merupakan bilangan bulat sembarang
+'''
+'''
+Input : nilai x bilangan bulat sembarang
+
+Proses : cetak nilai f sesuai dengan nilai x yang diinput
+
+Output : nilai f
+'''
+print('*****PROGRAM MENGHITUNG PERSAMAAN*****')
+print('Diketahui f = 2x**3 + 2x + 15/x')
+x = int(input('Masukkan nilai x = '))
+f = (2*x)**3 + 2*x + 15/x
+print('Jika nilai x = ', x, 'maka nilai f = ', f)
