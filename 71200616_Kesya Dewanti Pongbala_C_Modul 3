@@ -1,0 +1,36 @@
+# Nama : Kesya Dewanti Pongbala
+# Universitas Kristen Duta Wacana
+
+'''
+Buatlah sebuah program yang akan menguji apakah suatu suhu (dalam Celcius) adalah beku, cair, atau gas.
+Kemungkinan :
+Beku apabila suhu < 0 derajat
+Cair apabila suhu berada pada kisaran 0-100 derajat
+Gas apabila suhu > 100.
+
+'''
+'''
+Input : nilai suhu dalam celcius
+
+Proses :
+Jika suhu < 0 = cetak beku
+Jika suhu >= 0 dan suhu <= 100 = cetak cair
+Jika suhu > 100 = cetak gas
+
+Output : tipe dari suhu
+''' 
+print('**********PROGRAM MENENTUKAN TIPE SUHU**********')
+
+c = int(input('Masukkan nilai suhu dalam celcius= '))
+
+if c < 0:
+    print('Suhu', c, 'derajat memiliki tipe beku')
+elif c >= 0 and c <= 100:
+    print('Suhu', c, 'derajat memiliki tipe cair')
+else:
+    print('Suhu', c, 'derajat memiliki tipe gas')
+
+R = 4/5*c
+F = 9/5*c + 35
+print('Hasil konversi suhu ke Reamur adalah ',R)
+print('Hasil konversi suhu ke Fahrenheit adalah ',F)
