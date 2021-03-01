@@ -1,0 +1,43 @@
+# Nama : Kesya Dewanti Pongbala
+# Universitas Kristen Duta Wacana
+
+'''
+Sebuah toko buah menjual tiga jenis buah, yaitu anggur, markisa dan kiwi. Penjualan 1 kg buah anggur
+adalah Rp.35000, sedangkan buah markisa diberi harga Rp. 26000 per kilo dan buah kiwi seharga
+Rp. 30000 per kilonya. Buatlah program yang akan membantu pemilik toko untuk menghitung total belanja
+setiap pembeli yang datang ke toko buahnya.
+
+Input   : jenis buah dan banyak buah
+
+Proses  :
+Jika pilihan = 1 : cetak total harga buah anggur
+Jika pilihan = 2 : cetak total harga buah markisa
+Jika pilihan = 3 : cetak total harga buah kiwi
+
+Output  : total belanja
+
+'''
+print('====== Program Menghitung Total Belanja Buah ======')
+print('1.Anggur')
+print('2.Markisa')
+print('3.Kiwi')
+pilihan = int(input('Masukkan pilihan Anda: '))
+jumlah = float(input('Masukkan jumlah pengambilan buah dalam kg: '))
+
+def totalHarga(x):
+    if pilihan == 1:
+        harga = 35000
+    elif pilihan == 2:
+        harga = 26000
+    elif pilihan == 3:
+        harga = 30000
+    else:
+        harga = 0
+        print('Inputan Anda salah.')
+    total = harga*jumlah
+    return total
+
+hasil = totalHarga(jumlah)
+ print('Total belanja Anda Rp.',hasil) 
+
+
