@@ -1,0 +1,28 @@
+# Nama : Kesya Dewanti Pongbala
+# Universitas Kristen Duta Wacana
+'''
+Ana adalah seorang siswi di SMA Nusantara. Suatu hari, Ana mendapat tugas matematika tentang
+deret fibonacci. Sayangnya, Ana belum begitu mengerti tentang materi tersebut. Sebagai teman
+yang baik, buatlah sebuah program yang dapat membantu Ana untuk menyelesaikan tugasnya!
+
+input : angka yang akan dicari deret fibonaccinya
+
+proses :
+selama jumlah 2 bilangan sebelum 'angka' <= 'angka' = tampilkan detet fibonaci
+
+output : deret fibonacci
+'''
+
+print('====== Deret Fibonacci ======')
+angka = int(input('Masukkan angka: '))
+bilangan_1 = 1
+bilangan_2 = 1
+bilangan_3 = bilangan_1 + bilangan_2
+print(bilangan_1, end=' ')
+print(bilangan_2, end=' ')
+
+while bilangan_3 <= angka:
+    print (bilangan_3, end=' ')
+    bilangan_1 = bilangan_2
+    bilangan_2 = bilangan_3
+    bilangan_3 = bilangan_1 + bilangan_2
