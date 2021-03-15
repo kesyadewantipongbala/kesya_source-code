@@ -1,0 +1,38 @@
+# Nama  : Kesya Dewanti Pongbala
+# NIM   : 71200616
+'''
+Buatlah sebuah program yang akan menampilkan pola sebuah persegi dengan
+karakter yang sesuai dengan pilihan user!
+
+Input: 
+jenis karakter
+ukuran sisi persegi
+
+Proses:
+perulangan untuk baris
+    - percabangan
+    - perulangan untuk kolom
+        percabangan kompleks
+
+Output: Pola persegi
+'''
+print('====== Program Membuat Pola Persegi =====')
+print ('Pilihan Karakter: \n1. Karakter Pagar (#) \n2. Karakter Tanda Tambah (+) \n3. aKarakter Silang (x)')
+pilihan = int(input('Masukkan pilihan karakter: '))
+ukuran_sisi = int(input('Masukkan ukuran sisi persegi: '))
+
+for baris in range(1,ukuran_sisi+1):
+    if pilihan > 3:
+        print('Kami tidak tahu karakter apa yang anda pilih. Silahkan masukkan input dengan benar.')
+        break
+    for kolom in range(1,ukuran_sisi+1):
+        if baris == 1 or baris == ukuran_sisi or kolom == 1 or kolom == ukuran_sisi:
+            if pilihan == 1:
+                print('#',end=" ")
+            elif pilihan == 2:
+                print('+',end=" ")
+            else:
+                print('x',end=" ")
+        else:
+            print("  ",end='')
+    print()
