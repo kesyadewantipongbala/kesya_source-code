@@ -1,0 +1,46 @@
+#Nama   : Kesya Dewanti Pongbala
+#NIM    : 71200616
+
+'''
+Buatlah sebuah program untuk membaca input berupa: nim, nama mahasiswa, dan kota asal mahasiswa.
+(User dapat memasukkan input data sebanyak yang mereka inginkan).
+Simpan data yang telah diinputkan oleh user ke dalam file text, dengan format: nim|nama|kota
+
+input   : nim, nama, dan kota asal
+proses  : input biodata pertama => simpan data ke file text
+          input biodata kedua => simpan data ke file text
+          input biodata ketiga => simpan data ke file text
+          dst...
+output  : menampilkan file text yang berisi data dengan format nim|nama|alamat
+'''
+ulangi = "y"
+#membuat file
+file = open("biodata.txt","w")
+file.write("========== Boidata Mahasiswa ==========\n")
+file.close()
+
+#perulangan
+while ulangi =="y":
+    nim = input('Masukkan NIM anda:')
+    nama = input('Masukkan nama anda:')
+    kota = input('Masukkan nama kota asal anda:')
+    data = nim + '|' + nama +'|' + kota +'\n'
+    file2 = open("biodata.txt","a")
+    file2.write(data)
+    file2.close()
+    ulangi = input("\nUlangi input lagi? (y/n):")
+    print()
+if ulangi=="n":
+    file3 = open("biodata.txt","r")
+    print(file3.read())
+    file3.close()
+
+
+
+    
+
+
+
+
+
+
