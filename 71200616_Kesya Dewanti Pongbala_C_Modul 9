@@ -1,0 +1,40 @@
+#Nama :Kesya Dewanti Pongbala
+#NIM  : 71200616
+
+'''
+Buatlah sebuah program yang akan menampilkan daftar menu dari sebuah kedai kopi, dimana program tersebut
+memiliki 4 buah list yang masing-masing berisi nama makanan, nama minuman,harga makanan, dan harga minuman.
+
+input : nama makanan, nama minuman, harga makanan, dan harga minuman (buat dalam source code)
+proses : program akan melakukan pemetaan terhadap list
+        makanan[0] -> hargaMakanan[0]
+        makanan[1] -> hargaMakanan[1]
+        ...
+Output : daftar menu dari semua list
+'''
+def daftarMenu (a,b,c,d):
+    print('- Makanan -\t\t','- Harga -')
+    for i in range (len(makanan)):
+        if len(makanan[i]) >= 8:
+            menu1 = makanan[i] + '\t\t' + 'Rp.' + harga_makanan[i]
+            print(menu1)
+        else:
+            menu1 = makanan[i] + '\t\t\t' + 'Rp.' + harga_makanan[i]
+            print(menu1)
+    
+    print('\n- Minuman -\t\t','- Harga -')
+    for j in range (len(minuman)):
+        if len(minuman[j]) >= 8:
+            menu2 = minuman[j] + '\t\t' + 'Rp.' + harga_minuman[j]
+            print(menu2)
+        else:
+            menu2 = minuman[j] + '\t\t\t' + 'Rp.' + harga_minuman[j]
+            print(menu2)
+
+print('\t',' Daftar Menu WAI')
+print('\t~ Teman Minum Kamu ~','\n','===================================')
+makanan = ['Banana Roll','Muffin','Cookies','French Fries']
+harga_makanan = ['15.000','17.000','17.000','10.000']
+minuman = ['Black Coffee','Vanila Latte', 'Green Tea','Lemon Tea']
+harga_minuman = ['15.000','20.000','18.000','15.000']
+daftarMenu(makanan,minuman,harga_makanan,harga_minuman)
