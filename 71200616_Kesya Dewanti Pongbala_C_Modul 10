@@ -1,0 +1,33 @@
+#Nama   : Kesya Dewanti Pongbala
+#NIM    : 71200616
+
+'''
+Buatlah sebuah program berbentuk kamus yang dapat menampung input user berupa
+nama-nama hewan dalam bahasa indonesia dan bahasa inggris.
+
+input : nama-nama hewan
+
+proses:
+input nama hewan dalam bahasa indonesia
+input nama hewan dalam bahasa inggris
+simpan ke dalam kamus
+
+output: isi dari kamus
+'''
+kamus = dict()
+try:
+    a = int(input("Berapa nama hewan yang ingin ditambahkan?: "))
+    for i in range (a):
+        kata_indo = input("Nama hewan dalam Bahasa Indonesia : ")
+        kata_ing = input("Nama hewan dalam Bahasa Inggris : ")
+        kata_indo,kata_ing = kata_indo.lower(),kata_ing.lower()
+        if kata_indo in kamus:
+            print("Nama hewan tersebut sudah ada di dalam kamus.")
+        else:
+            kamus[kata_indo] = kata_ing
+    print ("===== K A M U S =====")
+    lst = list(kamus.keys())
+    for key in lst:
+        print(key,':',kamus[key])
+except:
+    print("Terjadi Error!")
