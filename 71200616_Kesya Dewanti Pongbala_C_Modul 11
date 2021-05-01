@@ -1,0 +1,34 @@
+#Nama   : Kesya Dewanti Pongbala
+#NIM    : 71200616
+
+'''
+Buatlah sebuah program yang dapat menampilkan daftar nilai dari mahasiswa dan urutkan
+data tersebut mulai dari nilai tertingggi
+
+input : Nama mahasiswa dan nilai
+
+proses : 
+masukkan nama dan nilai --> simpan dalam dictionary --> urutkan data berdasarkan nilai
+
+output : daftar nilai mulai dari nilai tertinggi (nama - nilai)
+'''
+d = dict()
+l = list()
+try:
+    jumlah = int(input("Masukkan jumlah mahasiswa: "))
+    for i in range(1,jumlah+1):
+        nama_mahasiswa = input("\n%d. Nama  : "%i)
+        nilai_mahasiswa = int(input("   Nilai : "))
+        nama_mahasiswa = nama_mahasiswa.capitalize()
+        d[nama_mahasiswa] = nilai_mahasiswa
+
+    for nama,nilai in list(d.items()):
+        l.append((nilai,nama))
+
+    l.sort(reverse=True)
+
+    print("\n======= Daftar Nilai =======")
+    for nilai,nama in l:
+        print(nama,'\t',nilai)
+except:
+    print("Terjadi Error!")
