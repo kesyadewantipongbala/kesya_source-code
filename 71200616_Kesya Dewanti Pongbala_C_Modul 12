@@ -1,0 +1,57 @@
+#Nama   : Kesya Dewanti Pongbala
+#NIM    : 71200616
+
+'''Dina adalah seorang guru olahraga. Ia ditugaskan untuk mendata setiap siswa kelas 8A
+yang mengikuti lomba basket dan sepak bola. Ia juga harus mendata setiap siswa yang tidak mengikuti lomba.
+Sebagai alumni yang baik, bantulah Ibu Dina untuk membuat program yang dapat menampilkan daftar nama
+siswa yang mengikuti lomba dan yang tidak mengikuti lomba tersebut.
+
+input : nama seluruh siswa kls 8A, nama siswa yang mengikuti lomba basket,
+        nama siswa yang mengikuti lomba sepak bola.
+
+proses: 
+input nama seluruh siswa
+input nama siswa yang mengikuti lomba basket
+input nama siswa yang mengikuti lomba sepak bola
+tampilkan daftar nama siswa yang hanya mengikuti lomba basket   --> fungsi diference
+tampilkan daftar nama siswa yang hanya mengikuti lomba sepak bola   --> fungsi diference
+tampilkan daftar nama siswa yang mengikuti lomba basket dan sepak bola  --> fungsi intersection
+tampilkan daftar nama siswa yang tidak mengikuti lomba  --> fungsi difference dan fungsi union
+
+output:
+daftar nama siswa yang hanya mengikuti lomba basket
+daftar nama siswa yang hanya mengikuti lomba sepak bola
+daftar nama siswa yang mengikuti lomba basket dan sepak bola
+daftar nama siswa yang tidak mengikuti lomba'''
+
+daftar_nama = set()
+jumlah = int(input("Jumlah siswa kelas 8A adalah: "))
+for i in range(1,jumlah+1):
+    nama = input("%d. "%i)
+    daftar_nama.add(nama)
+
+print(daftar_nama)
+daftar_basket = set()
+basket = int(input("Jumlah siswa yang mengikuti lomba basket: "))
+for j in range (1,basket+1):
+    nama2 = input("%d."%j)
+    daftar_basket.add(nama2)
+
+daftar_sepakBola = set()
+sepakBola = int(input("Jumlah siswa yang mengikuti lomba sepak bola: "))
+for k in range (1,sepakBola+1):
+    nama3 = input("%d."%k)
+    daftar_sepakBola.add(nama3)
+
+hanya_basket = daftar_basket.difference(daftar_sepakBola)
+print("Daftar nama siswa yang hanya mengikuti lomba basket:",hanya_basket)
+
+hanya_sepakBola = daftar_sepakBola.difference(daftar_basket)
+print("Daftar nama siswa yang hanya mengikuti lomba sepak bola:",hanya_sepakBola)
+
+basket_bola = daftar_basket.intersection(daftar_sepakBola)
+print("Daftar nama siswa yang mengikuti lomba basket dan sepak bola:",basket_bola)
+
+a = daftar_basket.union(daftar_sepakBola)
+tidak_lomba = daftar_nama.difference(a)
+print("Daftar nama siswa yang tidak mengikuti lomba:",tidak_lomba)
