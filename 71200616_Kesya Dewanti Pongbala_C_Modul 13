@@ -1,0 +1,35 @@
+#Nama   : Kesya Dewanti Pongbala
+#NIM    : 71200616
+
+'''Buatlah sebuah program yang dapat menampilkan nilai maksimal (menggunakan rekursif) dari sebuah list. List tersebut
+berisi angka yang dirandom.
+input: range angka yang akan di random
+       jumlah angka yang akan di random
+       
+proses: def nilai_maksimal()
+            ....
+            a = nilai_maksimal()
+output: nilai maksimal yang ada pada list
+'''
+import random
+def nilai_maksimal(list):
+    nilai_terbesar = list[0]
+    #print(list,'->',nilai_terbesar)    #dingunakan untuk melihat proses dari program
+    if len(list) > 1:
+        #proses rekursif
+        next_nilai_terbesar = nilai_maksimal(list[1:])
+
+        if next_nilai_terbesar > nilai_terbesar:
+            nilai_terbesar = next_nilai_terbesar
+    #print(list,'->',nilai_terbesar)    #dingunakan untuk melihat proses dari program
+    return nilai_terbesar
+
+a = []
+awal = int(input('Masukkan nilai awal: '))
+akhir = int(input('Masukkan nilai akhir: '))
+jumlah = int(input('Masukkan jumlah angka yang akan dicari: '))
+for i in range (jumlah):
+    data = random.randint(awal,akhir)
+    a.append(data)
+print(a)
+print('Nilai terbesar:',nilai_maksimal(a))
