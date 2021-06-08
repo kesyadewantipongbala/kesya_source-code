@@ -1,0 +1,33 @@
+#Nama   : Kesya Dewanti Pongbala
+#NIM    : 71200616
+
+'''
+Berikut adalah daftar nomor telepon dan nama dari pemilik nomor yang ada:
+Nomor telepon 0892 3457 8091 adalah milik Diva.
+Nomor telepon 0873 4509 1267 adalah milik Risna.
+Nomor telepon 0849 2441 8720 adalah milik Sania.
+Nomor telepon 0889 4128 1665 adalah milik Reza.
+Buatkah program menggunakan regex yang dapat menampilkan nama pemilik nomor tersebut beserta nomornya,
+sesuai dengan data diatas. Contoh format output:
+Bela : 0836 7102 5513
+
+input: Data nomor telepon dan nama pemiliknya
+
+proses:
+membuat pola regex yang sesuai untuk menemukan nomor telepon
+membuat pola regex yang sesuai untuk menemukan nama pemilik nomor
+tampilkan hasil sesuai format pada soal.
+
+outputnya: nama pengguna dan nomor telepon.
+'''
+import re
+
+inpt = input("Masukkan input:\n")
+nomor = re.findall('[0-9]+ [0-9]+ [0-9]+',inpt)
+cari_nama = re.findall('[A-Z][a-z]+[.]',inpt)
+k = 0
+for i in cari_nama:
+    cari_nama2 = str(i).find(".")
+    print(i[0:cari_nama2],": ",end="")
+    print(nomor[k])
+    k = k+1
