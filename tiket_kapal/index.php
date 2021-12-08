@@ -5,7 +5,7 @@
 	<title>Tiket Kapal</title>
 </head>
 <body>
-	<ul>
+    <ul>
         <li><a href="petugas">Petugas</a></li>
         <li><a href="kapal">Kapal</a></li>
         <li><a href="jadwal">Jadwal Kapal</a></li>
