@@ -22,7 +22,7 @@ $jadwal_kapal = mysqli_query($mysqli, "SELECT * FROM jadwal_kapal");
     <br/><br/>
  
     <form action="add.php" method="post" nama_petugas="form1">
-        <table width="25%" border="0">
+        <table width="50%" border="0">
             <tr> 
                 <td>Kode Jadwal Kapal</td>
                 <td>
@@ -55,7 +55,7 @@ $jadwal_kapal = mysqli_query($mysqli, "SELECT * FROM jadwal_kapal");
             </tr>
 
             <tr> 
-                <td>Kode Jadwal Kapal</td>
+                <td>Nama Petugas</td>
                 <td>
                     <select name="id_petugas" >
                         <?php  while ($data=mysqli_fetch_array($petugas)) {?>
